@@ -9,6 +9,49 @@ body {
     font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
+.type{
+    border: 1px solid #959595;
+    font-size: 20px;
+    font-style: italic;
+    line-height: 1.2em;
+    padding: 0 5px;
+    text-align: center;
+    background-color: azure;
+}
+
+.address-text{
+    color: white;
+}
+
+.our-address{
+    font-size: 2em;
+    color: white;
+}
+
+.partner-first-row{
+    padding: 2%;
+}
+
+.class_justify{
+    text-align: justify;
+}
+
+
+.part img{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.timeline-image img{
+    width: 415%;
+    height: 207%;
+}
+
+.intro-text{
+    padding-bottom: 6%;
+}
+
 .text-muted {
     color: #777;
 }
