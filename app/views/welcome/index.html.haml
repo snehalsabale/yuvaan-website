@@ -10,7 +10,7 @@
     %link{:href => "http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css", :rel => "stylesheet"}
     %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"}
     %script{:src => "http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"}
-    -#%link{:href => "font-awesome/css/font-awesome.min.css", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "assets/font-awesome.min.css", :rel => "stylesheet", :type => "text/css"}
     %link{:href => "https://fonts.googleapis.com/css?family=Montserrat:400,700", :rel => "stylesheet", :type => "text/css"}
     %link{:href => "https://fonts.googleapis.com/css?family=Kaushan+Script", :rel => "stylesheet", :type => "text/css"}
     %link{:href => "https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic", :rel => "stylesheet", :type => "text/css"}
@@ -37,16 +37,28 @@
           %ul.nav.navbar-nav.navbar-right
             %li.hidden
               %a{:href => "#page-top"}
+
             %li
-              %a.page-scroll{:href => "#services"} Services
+              %a.page-scroll{:href => "#news_and_events"} News And Events
+
             %li
-              %a.page-scroll{:href => "#portfolio"} Portfolio
-            %li
-              %a.page-scroll{:href => "#about"} About
+              %a.page-scroll{:href => "#become_volunteer"} Become a Volunteer
+
             %li
               %a.page-scroll{:href => "#team"} Team
+
+            %li
+              %a.page-scroll{:href => "#about"} About
+
             %li
               %a.page-scroll{:href => "#contact"} Contact
+
+
+            -#%li
+            -#  %a.page-scroll{:href => "#services"} Services
+            -#
+            -#%li
+            -#  %a.page-scroll{:href => "#portfolio"} Portfolio
     / /.navbar-collapse
     / /.container-fluid
     / Header
@@ -62,23 +74,21 @@
           / Wrapper for slides
           .carousel-inner{:role => "listbox"}
             .item.active
-              %img{:alt => "Chania", :height => "250", :src => "assets/1.JPG"}
+              %img{:alt => "Chania", :src => "assets/1.png"}
             .item
-              %img{:alt => "Flower", :height => "250", :src => "assets/2.jpg"}
+              %img{:alt => "Flower", :src => "assets/3.png"}
             .item
-              %img{:alt => "Flower", :height => "345", :src => "assets/3.JPG"}
+              %img{:alt => "Flower", :src => "assets/4.png"}
             .item
-              %img{:alt => "Flower", :height => "345", :src => "assets/4.jpg"}
+              %img{:alt => "Flower", :src => "assets/5.png"}
             .item
-              %img{:alt => "Flower", :height => "345", :src => "assets/5.jpg"}
+              %img{:alt => "Flower", :src => "assets/6.png"}
             .item
-              %img{:alt => "Flower", :height => "345", :src => "assets/6.JPG"}
+              %img{:alt => "Flower", :src => "assets/7.png"}
             .item
-              %img{:alt => "Flower", :height => "345", :src => "assets/7.JPG"}
+              %img{:alt => "Flower", :src => "assets/8.png"}
             .item
-              %img{:alt => "Flower", :height => "345", :src => "assets/8.JPG"}
-            .item
-              %img{:alt => "Flower", :height => "345", :src => "assets/9.JPG"}
+              %img{:alt => "Flower", :src => "assets/9.png"}
           / Left and right controls
           %a.left.carousel-control{"data-slide" => "prev", :href => "#myCarousel", :role => "button"}
             %span.glyphicon.glyphicon-chevron-left{"aria-hidden" => "true"}
@@ -174,161 +184,256 @@
             .portfolio-caption
               %h4 Dreams
               %p.text-muted Website Design
-    / About Section
-    %section#about
+
+    %section#become_volunteer
       .container
         .row
-          .col-lg-12.text-center
-            %h2.section-heading About
-            %h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur.
-        .row
           .col-lg-12
-            %ul.timeline
-              %li
-                .timeline-image
-                  %img.img-circle.img-responsive{:alt => "", :src => "assets/about/1.jpg"}
-                .timeline-panel
-                  .timeline-heading
-                    %h4 2009-2011
-                    %h4.subheading Our Humble Beginnings
-                  .timeline-body
-                    %p.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
-              %li.timeline-inverted
-                .timeline-image
-                  %img.img-circle.img-responsive{:alt => "", :src => "assets/about/2.jpg"}
-                .timeline-panel
-                  .timeline-heading
-                    %h4 March 2011
-                    %h4.subheading An Agency is Born
-                  .timeline-body
-                    %p.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
-              %li
-                .timeline-image
-                  %img.img-circle.img-responsive{:alt => "", :src => "assets/about/3.jpg"}
-                .timeline-panel
-                  .timeline-heading
-                    %h4 December 2012
-                    %h4.subheading Transition to Full Service
-                  .timeline-body
-                    %p.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
-              %li.timeline-inverted
-                .timeline-image
-                  %img.img-circle.img-responsive{:alt => "", :src => "assets/about/4.jpg"}
-                .timeline-panel
-                  .timeline-heading
-                    %h4 July 2014
-                    %h4.subheading Phase Two Expansion
-                  .timeline-body
-                    %p.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
-              %li.timeline-inverted
-                .timeline-image
-                  %h4
-                    Be Part
-                    %br
-                      Of Our
-                      %br Story!
+            %h2.text-center.section-heading Yuvaan Sewavrati (Volunteers)
+            %p.class_justify
+              ‘Yuvaan’ is building up the youth and inculcating in them social sensitivity, love for the country aand a humane perspective without any kind of caste or religion based discrimination. The Yuvaan Sewavrati Movement is aimed at bringing about constructive change. Through this movement the youth are provided with opportunities to participate in the State and National level youth camps and contribute in various activities of social organisations as ‘Yuvaan Sewavrati’ (volunteers). ‘Yuvaan Movement ‘ enriches and deepens the awareness of social responsibilities among the youth and inspires them to lead a life of hope. ‘Yuvaan’ believes that by increasing the participation of the youth in youth empowerment and constructive activities we  can surely realize the dream of a developed progressive India.
+            %p
+              %b
+                %i
+                  To become a volunteer of YUVAAN
+                  %a{href: 'http://goo.gl/forms/B2KRgTS1gx', target: '_blank'} Click Here
+
     / Team Section
     %section#team.bg-light-gray
       .container
         .row
           .col-lg-12.text-center
             %h2.section-heading Our Amazing Team
-            %h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur.
+
         .row
           .col-sm-4
             .team-member
-              %img.img-responsive.img-circle{:alt => "", :src => "assets/team/1.jpg"}
-                %h4 Kay Garland
-                %p.text-muted Lead Designer
-                %ul.list-inline.social-buttons
-                  %li
-                    %a{:href => "#"}
-                      %i.fa.fa-twitter
-                  %li
-                    %a{:href => "#"}
-                      %i.fa.fa-facebook
-                  %li
-                    %a{:href => "#"}
-                      %i.fa.fa-linkedin
+              %img.img-responsive.img-circle{:alt => "", :src => "assets/sandip.png"}
+                %h4 Sandip Kusalkar
+                %p.text-muted Founder & President
+
           .col-sm-4
             .team-member
-              %img.img-responsive.img-circle{:alt => "", :src => "assets/team/2.jpg"}
-                %h4 Larry Parker
-                %p.text-muted Lead Marketer
-                %ul.list-inline.social-buttons
-                  %li
-                    %a{:href => "#"}
-                      %i.fa.fa-twitter
-                  %li
-                    %a{:href => "#"}
-                      %i.fa.fa-facebook
-                  %li
-                    %a{:href => "#"}
-                      %i.fa.fa-linkedin
+              %img.img-responsive.img-circle{:alt => "", :src => "assets/suresh.png"}
+                %h4 Suresh Maid
+                %p.text-muted Co-Founder & Secretory
+
           .col-sm-4
             .team-member
-              %img.img-responsive.img-circle{:alt => "", :src => "assets/team/3.jpg"}
-                %h4 Diana Pertersen
-                %p.text-muted Lead Developer
-                %ul.list-inline.social-buttons
-                  %li
-                    %a{:href => "#"}
-                      %i.fa.fa-twitter
-                  %li
-                    %a{:href => "#"}
-                      %i.fa.fa-facebook
-                  %li
-                    %a{:href => "#"}
-                      %i.fa.fa-linkedin
-        .row
-          .col-lg-8.col-lg-offset-2.text-center
-            %p.large.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.
-    / Clients Aside
-    %aside.clients
+              %img.img-responsive.img-circle{:alt => "", :src => "assets/prasanna.png"}
+                %h4 Prasanna Bora
+                %p.text-muted Co-Founder & Asst. Secretory
+
+          .row
+            .col-sm-4
+              .team-member
+                %img.img-responsive.img-circle{:alt => "", :src => "assets/rakesh.png"}
+                  %h4 Rakesh Gore
+                  %p.text-muted Co-Founder & Trustee
+                  -#%ul.list-inline.social-buttons
+                  -#  %li
+                  -#    %a{:href => "#"}
+                  -#      %i.fa.fa-twitter
+                  -#  %li
+                  -#    %a{:href => "#"}
+                  -#      %i.fa.fa-facebook
+                  -#  %li
+                  -#    %a{:href => "#"}
+                  -#      %i.fa.fa-linkedin
+            .col-sm-4
+              .team-member
+                %img.img-responsive.img-circle{:alt => "", :src => "assets/vinayak.png"}
+                  %h4 Adv. Vinayak Sangle
+                  %p.text-muted Trustee & Legal Adviser
+
+            .col-sm-4
+              .team-member
+                %img.img-responsive.img-circle{:alt => "", :src => "assets/dagdu.png"}
+                  %h4 Dagdu Lomte
+                  %p.text-muted Vice President
+
+          .row
+            .col-sm-4
+              .team-member
+                %img.img-responsive.img-circle{:alt => "", :src => "assets/satish.png"}
+                  %h4 Satish Yeole
+                  %p.text-muted Trustee & Core Volunteer
+
+            .col-sm-4
+              .team-member
+                %img.img-responsive.img-circle{:alt => "", :src => "assets/snehal.png"}
+                  %h4 Snehal Sabale
+                  %p.text-muted Co-Founder & Trustee
+
+            .col-sm-4
+              .team-member
+                %img.img-responsive.img-circle{:alt => "", :src => "assets/varsha.png"}
+                  %h4 Varsha Mule - Kusalkar
+                  %p.text-muted Co-Founder & Trustee
+          .row
+            .col-sm-4
+              .team-member
+                %img.img-responsive.img-circle{:alt => "", :src => "assets/zaheer.png"}
+                  %h4 Dr.Zaheer Mujawar
+                  %p.text-muted Trustee & Core Volunteer
+
+            .col-sm-4
+              .team-member
+                %img.img-responsive.img-circle{:alt => "", :src => "assets/sonali.png"}
+                  %h4 Sonali Kale
+                  %p.text-muted Trustee & Core Volunteer
+
+            .col-sm-4
+              .team-member
+                %img.img-responsive.img-circle{:alt => "", :src => "assets/arvind.png"}
+                  %h4 Arvind Daund
+                  %p.text-muted Trustee & Core Volunteer
+
+    / About Section
+    %section#about
       .container
         .row
-          .col-md-3.col-sm-6
-            %a{:href => "#"}
-              %img.img-responsive.img-centered{:alt => "", :src => "assets/logos/envato.jpg"}
-          .col-md-3.col-sm-6
-            %a{:href => "#"}
-              %img.img-responsive.img-centered{:alt => "", :src => "assets/logos/designmodo.jpg"}
-          .col-md-3.col-sm-6
-            %a{:href => "#"}
-              %img.img-responsive.img-centered{:alt => "", :src => "assets/logos/themeforest.jpg"}
-          .col-md-3.col-sm-6
-            %a{:href => "#"}
-              %img.img-responsive.img-centered{:alt => "", :src => "assets/logos/creative-market.jpg"}
+          .col-lg-12.text-center
+            %h2.section-heading About
+            %h3.section-subheading.text-muted
+              %b Empowering youth, Empowering Nation
+          .col-lg-12
+            %p.intro-text  The youth who were inspired by Swami Vivekanand, India’s ex-President Dr. A.P.J. Abdul Kalaam and especially guided by Gandhian Dr. S. N. Subbarao , and who have also been successful in various field, have come together to form the volunteer youth organization, Yuvaan in September 2013. ‘Yuvaan’ provides socially and economically underprivileged orphaned students educational material, career guidance, vocational skills training and lodging and meals  as the need be, free of cost. ‘Yuvaan’ specially focuses its activities to inculcate social sensitivity, brotherhood, love for the country and a humane perspective without discrimination. ‘Yuvaan’ aims to build up the nation by building up character.
+        .row
+          .col-lg-12
+            %ul.timeline
+              %li
+                .timeline-image
+                  %img{:alt => "", :src => "assets/foundation.JPG"}
+                .timeline-panel
+                  .timeline-heading
+                    %h4 November 1, 2013
+                  .timeline-body
+                    %p.text-muted Dr. S. N. Subbarao inaugurating the Yuvaan, Youth Empowerment Center
+    %section#success-stories
+      .container
+        .row
+          .col-lg-12.text-center
+            %h2.section-heading  Success Stories
+            %h3.section-subheading.text-muted
+              %b ‘Yuvaan’ and the flight of the Phoenix
+        .row
+          .col-sm-3
+            .team-member
+              %img.img-responsive.img-circle{:alt => "", :src => "assets/bhagyashree.jpg"}
+                %h4 Bhyagyashri Surywanshi
+          .col-sm-3
+            %p.text-justify I have completed my Diploma from Women’s Government Polytechnic, Latur with distinction. I was apprehensive whether I would be able to go on to procure a degree because of my critical  family situation. The only option that I could see available to me was to take up a job to earn my living. At that point of time ‘Team Yuvaan’ extended a helping hand. They helped me to avail admission for further education at reputed  Sanjeevani Engineering College, Kopergoan Dist. Ahmednagar.
+
+          .col-sm-3
+            .team-member
+              %img.img-responsive.img-circle{:alt => "", :src => "assets/sambhaji.jpg"}
+                %h4 Sambhaji Mohite
+          .col-sm-3
+            %p.text-justify I was facing many problems for my further education because I did not have any support after I left the govt. aided hostel after 10th.  I was contemplating giving up my studies and earning my living. ‘Team Yuvaan ‘ lent me a helping hand at that juncture. I am now able to concentrate of my studies without worrying about other problems. It is my dream to be useful to my country after completing my ITI followed by private job.
+
+
+        .row
+          .col-sm-3
+            .team-member
+              %img.img-responsive.img-circle{:alt => "", :src => "assets/usman.jpg"}
+                %h4 Usman Shaikh
+          .col-sm-3
+            %p.text-justify I was raised in an orphage since I was a small child. I did not have any kind of support after I had to leave the orphanage according to the rules. Even though I was a National player, discrimination often left me disappointed. At that point of time , ‘Team Yuvaan’ extended their brotherly co-operation . They took up my responsibility. I have since then, again begun to dream about bringing glory to India’s name on an International level
+
+          .col-sm-3
+            .team-member
+              %img.img-responsive.img-circle{:alt => "", :src => "assets/varsha.JPG"}
+                %h4 Varsha Gaware
+          .col-sm-3
+            %p.text-justify  I cant change my physical disability but I can change my attitude towards life. I have realized my strength with the help of Yuvaan.  Now I believe in CHANCE & NOT in CHARITY. Yuvaan has given me that chance to prove myself.  I have a very strong desire to become a honest govt. officer & to make a difference to my community.
+
+
+    .container
+      .partners
+        .row
+          %p.type
+            %strong Partners
+        .row.partner-first-row
+          .col-md-4.part
+            =image_tag("SHANTI.png")
+          .col-md-4.part
+            =image_tag("ROTARY.jpg")
+          .col-md-4.part
+            =image_tag("BAJAJ")
+        .row.partner-first-row
+          .col-md-4.part
+            =image_tag("NYP")
+          .col-md-4.part
+            =image_tag("MAHARASHTRA")
+          .col-md-4.part
+            =image_tag("SBI")
     / Contact Section
     %section#contact
       .container
         .row
           .col-lg-12.text-center
             %h2.section-heading Contact Us
-            %h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur.
+            %h3.section-subheading.text-muted
+              %b You can reach us....
         .row
           .col-lg-12
             %form#contactForm{:name => "sentMessage", :novalidate => ""}
               .row
-                .col-md-6
-                  .form-group
-                    %input#name.form-control{"data-validation-required-message" => "Please enter your name.", :placeholder => "Your Name *", :required => "", :type => "text"}
-                      %p.help-block.text-danger
-                  .form-group
-                    %input#email.form-control{"data-validation-required-message" => "Please enter your email address.", :placeholder => "Your Email *", :required => "", :type => "email"}
-                      %p.help-block.text-danger
-                  .form-group
-                    %input#phone.form-control{"data-validation-required-message" => "Please enter your phone number.", :placeholder => "Your Phone *", :required => "", :type => "tel"}
-                      %p.help-block.text-danger
-                .col-md-6
-                  .form-group
-                    %textarea#message.form-control{"data-validation-required-message" => "Please enter a message.", :placeholder => "Your Message *", :required => ""}
-                    %p.help-block.text-danger
-                .clearfix
-                .col-lg-12.text-center
-                  #success
-                  %button.btn.btn-xl{:type => "submit"} Send Message
-    %footer
+                .col-md-5
+                  .container
+                    %p
+                      %strong.our-address ADDRESS
+                    %br/
+                    %address.address-text
+                      %p Dr. S. N.Subbarao Youth Empowerment Center
+                      %p 1st & 2nd Floor, Seema Apartment, Opp. Sidhi Bag,
+                      %p Near New Law College, Delhigate,
+                      %p Ahmednagar- 414001
+                      %p Maharashtra, India
+                      %p Mobile No: 9011118787/ 9822207720
+                  -#.form-group
+                  -#  %input#name.form-control{"data-validation-required-message" => "Please enter your name.", :placeholder => "Your Name *", :required => "", :type => "text"}
+                  -#    %p.help-block.text-danger
+                  -#.form-group
+                  -#  %input#email.form-control{"data-validation-required-message" => "Please enter your email address.", :placeholder => "Your Email *", :required => "", :type => "email"}
+                  -#    %p.help-block.text-danger
+                  -#.form-group
+                  -#  %input#phone.form-control{"data-validation-required-message" => "Please enter your phone number.", :placeholder => "Your Phone *", :required => "", :type => "tel"}
+                  -#    %p.help-block.text-danger
+                .col-md-7
+                  %script{:src => "https://maps.googleapis.com/maps/api/js?sensor=true", :type => "text/javascript"}
+                  %div{:style => "width:650px; height:300px;"}
+                    #map-canvas{:style => "width: 100%; height: 100%"}
+                    :javascript
+                      function initialize() {
+                        var mapOptions = {
+                          center: new google.maps.LatLng(19.1005681, 74.724818),
+                          zoom: 5,
+                          mapTypeId: google.maps.MapTypeId.ROADMAP
+                        };
+                      var myCenter=new google.maps.LatLng(19.1005681, 74.724818);
+                        //var map = new google.maps.Map(document.getElementById("map-canvas"),
+                        //    mapOptions);
+                      var mapProp = {
+                        center:myCenter,
+                        zoom:10,
+                        mapTypeId:google.maps.MapTypeId.ROADMAP
+                        };
+
+                      var map = new google.maps.Map(document.getElementById("map-canvas"),mapProp,mapOptions);
+
+                      var marker = new google.maps.Marker({
+                        position:myCenter,
+                        });
+
+                      marker.setMap(map);
+                      var infoWindow = new google.maps.InfoWindow({
+                        content: 'Dr. S. N.Subbarao Youth Empowerment Center (YUVAAN)'
+                      });
+                      infoWindow.open(map, marker);
+                      }
+                      google.maps.event.addDomListener(window, 'load', initialize);
       .container
         .row
           .col-md-4
@@ -510,15 +615,15 @@
                     %i.fa.fa-times
                     Close Project
     / jQuery
-    %script{:src => "js/jquery.js"}
+    %script{:src => "assets/jquery.js"}
     / Bootstrap Core JavaScript
-    %script{:src => "js/bootstrap.min.js"}
+    %script{:src => "assets/bootstrap.min.js"}
     / Plugin JavaScript
     %script{:src => "http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"}
-    %script{:src => "js/classie.js"}
-    %script{:src => "js/cbpAnimatedHeader.js"}
+    %script{:src => "assets/classie.js"}
+    %script{:src => "assets/cbpAnimatedHeader.js"}
     / Contact Form JavaScript
-    %script{:src => "js/jqBootstrapValidation.js"}
-    %script{:src => "js/contact_me.js"}
+    %script{:src => "assets/jqBootstrapValidation.js"}
+    %script{:src => "assets/contact_me.js"}
     / Custom Theme JavaScript
-    %script{:src => "js/agency.js"}
+    %script{:src => "assets/agency.js"}
