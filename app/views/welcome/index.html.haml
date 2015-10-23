@@ -23,33 +23,30 @@
   %body#page-top.index
     / Navigation
     %nav.navbar.navbar-default.navbar-fixed-top
-      .container
-        / Brand and toggle get grouped for better mobile display
+      .container.nav_bar_custom
+        / Brand and toggle get grouped for better mobile display  display: inline-flex;
+        %img.navbar-brand.page-scroll{src: 'assets/logo.jpg',:href => "#page-top"}
         .navbar-header.page-scroll
           %button.navbar-toggle{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
-            %span.sr-only Toggle navigation
-            %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
-        %img.navbar-brand.page-scroll{src: 'assets/logo.jpg',:href => "#page-top"}
+            -#%span.sr-only Toggle navigation
+            -#%span.icon-bar
+            -#%span.icon-bar
+            -#%span.icon-bar
         / Collect the nav links, forms, and other content for toggling
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           %ul.nav.navbar-nav.navbar-right
             %li.hidden
               %a{:href => "#page-top"}
-
-            %li
-              %a.page-scroll{:href => "#news_and_events"} News And Events
-
-            %li
-              %a.page-scroll{:href => "#become_volunteer"} Become a Volunteer
-
-            %li
-              %a.page-scroll{:href => "#team"} Team
-
             %li
               %a.page-scroll{:href => "#about"} About
-
+            %li
+              %a.page-scroll{:href => "#programs"} Programs
+            %li
+              %a.page-scroll{:href => "#team"} Team
+            %li
+              %a.page-scroll{:href => "#become_volunteer"} Become a Volunteer
+            %li
+              %a.page-scroll{:href => "#news_and_events"} News And Events
             %li
               %a.page-scroll{:href => "#contact"} Contact
 
@@ -87,8 +84,6 @@
               %img{:alt => "Flower", :src => "assets/7.png"}
             .item
               %img{:alt => "Flower", :src => "assets/8.png"}
-            .item
-              %img{:alt => "Flower", :src => "assets/9.png"}
           / Left and right controls
           %a.left.carousel-control{"data-slide" => "prev", :href => "#myCarousel", :role => "button"}
             %span.glyphicon.glyphicon-chevron-left{"aria-hidden" => "true"}
@@ -96,108 +91,59 @@
           %a.right.carousel-control{"data-slide" => "next", :href => "#myCarousel", :role => "button"}
             %span.glyphicon.glyphicon-chevron-right{"aria-hidden" => "true"}
             %span.sr-only Next
-    / Services Section
-    %section#services
+    / About Section
+    %section#about
       .container
         .row
           .col-lg-12.text-center
-            %h2.section-heading Services
-            %h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur.
-        .row.text-center
-          .col-md-4
-            %span.fa-stack.fa-4x
-              %i.fa.fa-circle.fa-stack-2x.text-primary
-              %i.fa.fa-shopping-cart.fa-stack-1x.fa-inverse
-            %h4.service-heading E-Commerce
-            %p.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
-          .col-md-4
-            %span.fa-stack.fa-4x
-              %i.fa.fa-circle.fa-stack-2x.text-primary
-              %i.fa.fa-laptop.fa-stack-1x.fa-inverse
-            %h4.service-heading Responsive Design
-            %p.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
-          .col-md-4
-            %span.fa-stack.fa-4x
-              %i.fa.fa-circle.fa-stack-2x.text-primary
-              %i.fa.fa-lock.fa-stack-1x.fa-inverse
-            %h4.service-heading Web Security
-            %p.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
-    / Portfolio Grid Section
-    %section#portfolio.bg-light-gray
-      .container
+            %h2.section-heading About
+            %h3.section-subheading.text-muted
+              %b Empowering youth, Empowering Nation
         .row
-          .col-lg-12.text-center
-            %h2.section-heading Portfolio
-            %h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur.
-        .row
-          .col-md-4.col-sm-6.portfolio-item
-            %a.portfolio-link{"data-toggle" => "modal", :href => "#portfolioModal1"}
-              .portfolio-hover
-                .portfolio-hover-content
-                  %i.fa.fa-plus.fa-3x
-              %img.img-responsive{:alt => "", :src => "assets/portfolio/roundicons.png"}
-            .portfolio-caption
-              %h4 Round Icons
-              %p.text-muted Graphic Design
-          .col-md-4.col-sm-6.portfolio-item
-            %a.portfolio-link{"data-toggle" => "modal", :href => "#portfolioModal2"}
-              .portfolio-hover
-                .portfolio-hover-content
-                  %i.fa.fa-plus.fa-3x
-              %img.img-responsive{:alt => "", :src => "assets/portfolio/startup-framework.png"}
-            .portfolio-caption
-              %h4 Startup Framework
-              %p.text-muted Website Design
-          .col-md-4.col-sm-6.portfolio-item
-            %a.portfolio-link{"data-toggle" => "modal", :href => "#portfolioModal3"}
-              .portfolio-hover
-                .portfolio-hover-content
-                  %i.fa.fa-plus.fa-3x
-              %img.img-responsive{:alt => "", :src => "assets/portfolio/treehouse.png"}
-            .portfolio-caption
-              %h4 Treehouse
-              %p.text-muted Website Design
-          .col-md-4.col-sm-6.portfolio-item
-            %a.portfolio-link{"data-toggle" => "modal", :href => "#portfolioModal4"}
-              .portfolio-hover
-                .portfolio-hover-content
-                  %i.fa.fa-plus.fa-3x
-              %img.img-responsive{:alt => "", :src => "assets/portfolio/golden.png"}
-            .portfolio-caption
-              %h4 Golden
-              %p.text-muted Website Design
-          .col-md-4.col-sm-6.portfolio-item
-            %a.portfolio-link{"data-toggle" => "modal", :href => "#portfolioModal5"}
-              .portfolio-hover
-                .portfolio-hover-content
-                  %i.fa.fa-plus.fa-3x
-              %img.img-responsive{:alt => "", :src => "assets/portfolio/escape.png"}
-            .portfolio-caption
-              %h4 Escape
-              %p.text-muted Website Design
-          .col-md-4.col-sm-6.portfolio-item
-            %a.portfolio-link{"data-toggle" => "modal", :href => "#portfolioModal6"}
-              .portfolio-hover
-                .portfolio-hover-content
-                  %i.fa.fa-plus.fa-3x
-              %img.img-responsive{:alt => "", :src => "assets/portfolio/dreams.png"}
-            .portfolio-caption
-              %h4 Dreams
-              %p.text-muted Website Design
-
-    %section#become_volunteer
-      .container
+          .col-sm-4.ideal-img
+            %img{src: 'assets/apj.png'}
+          .col-sm-4.ideal-img
+            %img{src: 'assets/snubbarao.png'}
+          .col-sm-4.ideal-img
+            %img{src: 'assets/vivekanand.png'}
         .row
           .col-lg-12
-            %h2.text-center.section-heading Yuvaan Sewavrati (Volunteers)
-            %p.class_justify
-              ‘Yuvaan’ is building up the youth and inculcating in them social sensitivity, love for the country aand a humane perspective without any kind of caste or religion based discrimination. The Yuvaan Sewavrati Movement is aimed at bringing about constructive change. Through this movement the youth are provided with opportunities to participate in the State and National level youth camps and contribute in various activities of social organisations as ‘Yuvaan Sewavrati’ (volunteers). ‘Yuvaan Movement ‘ enriches and deepens the awareness of social responsibilities among the youth and inspires them to lead a life of hope. ‘Yuvaan’ believes that by increasing the participation of the youth in youth empowerment and constructive activities we  can surely realize the dream of a developed progressive India.
-            %p
-              %b
-                %i
-                  To become a volunteer of YUVAAN
-                  %a{href: 'http://goo.gl/forms/B2KRgTS1gx', target: '_blank'} Click Here
+            %p.intro-text  The youth who were inspired by Swami Vivekanand, India’s ex-President Dr. A.P.J. Abdul Kalaam and especially guided by Gandhian Dr. S. N. Subbarao , and who have also been successful in various field, have come together to form the volunteer youth organization, Yuvaan in September 2013. ‘Yuvaan’ provides socially and economically underprivileged orphaned students educational material, career guidance, vocational skills training and lodging and meals  as the need be, free of cost. ‘Yuvaan’ specially focuses its activities to inculcate social sensitivity, brotherhood, love for the country and a humane perspective without discrimination. ‘Yuvaan’ aims to build up the nation by building up character.
 
+        .row
+          .col-lg-12
+            %ul.timeline
+              %li
+                .timeline-image
+                  %img{:alt => "", :src => "assets/foundation.JPG"}
+                .timeline-panel
+                  .timeline-heading
+                    %h4 November 1, 2013
+                  .timeline-body
+                    %p.text-muted Dr. S. N. Subbarao inaugurating the Yuvaan, Youth Empowerment Center
+    / Programs Section
+    %section#programs
+      .container
+        .row
+          .col-lg-12.text-center
+            %h2.section-heading Programs
+            %h3.section-subheading.text-muted  We Aims to Build up the Nation by Building up Character.
+        .row.text-center
+          .col-md-4.programs_img
+            %img{src: 'assets/career_dev.jpg'}
+            %h4.service-heading Yuvaan’s Centre For Career Development
+            %p.text-muted.text-justify ‘Yuvaan’s Centre for Career Development’ is providing unemployed youth training & career guidance for employment in Government and Private sectors.  Today 750+ youngsters have been already benefitted by the career guidance workshop & skill development training provided by the Centre and given their life a better direction. Last year, we have started “Competitive Exam Guidance Centre” with Library & Study Room facility also.
+            %p.text-muted.text-justify The library has number of latest & excellent books on all types of Competitive exams including UPSC, MPSC, Police, Railway, Bank recruitment etc with several magazines & newspapers also. We aim to give skill development training & employment to 500 unemployed youths & make 50 honest young officer & servant for Government system within next 4 years.
+          .col-md-4.programs_img
+            %img{src: 'assets/youth_empowerment.jpg'}
+            %h4.service-heading Dr. S. N. Subbarao ‘ Youth Empowerment Centre’
+            %p.text-muted.text-justify According to government rules, orphans have to leave the orphanages after they are 18 years old. Their dreams remain unfulfilled as they step out into the world without any hope of support. They are forced by their circumstances to take up any kind of job they get in order to earn their living even though they would like to take up higher education . It is obvious that they are deprived of equal opportunities of education and employment.
+            %p.text-muted.text-justify The centre has extended a helping hand to such youth. The centre has 32 students ( 24 boys & 8 girls) and aims to extend its support to 100 orphan , needy students with education, lodging, employment, vocational skills through adopting their responsibility within next 3 year. We are trying to create 100 ROLE MODELS within next 5 years among orphan, deprived students. It will inspire other deprived students also to work for their better career & future.
+          .col-md-4.programs_img
+            %img{src: 'assets/movement.png'}
+            %h4.service-heading The Yuvaan Movement
+            %p.text-muted.text-justify ‘Yuvaan’ is building up the youth and inculcating in them social sensitivity, love for the country and a humane perspective without any kind of caste or religion based discrimination. The Yuvaan Movement is aimed at bringing about constructive change. Through this movement the youth are provided with opportunities to participate in the State and National level youth camps and contribute in various activities of social organisations as ‘Yuvaan’ volunteers.
+            %p.text-muted.text-justify ‘Yuvaan Movement ‘ enriches and deepens the awareness of social responsibilities among the youth and inspires them to lead a life of hope. ‘Yuvaan’ believes that by increasing the participation of the youth in youth empowerment and constructive activities we  can surely realize the dream of a developed progressive India.
     / Team Section
     %section#team.bg-light-gray
       .container
@@ -230,16 +176,16 @@
                 %img.img-responsive.img-circle{:alt => "", :src => "assets/rakesh.png"}
                   %h4 Rakesh Gore
                   %p.text-muted Co-Founder & Trustee
-                  -#%ul.list-inline.social-buttons
-                  -#  %li
-                  -#    %a{:href => "#"}
-                  -#      %i.fa.fa-twitter
-                  -#  %li
-                  -#    %a{:href => "#"}
-                  -#      %i.fa.fa-facebook
-                  -#  %li
-                  -#    %a{:href => "#"}
-                  -#      %i.fa.fa-linkedin
+            -#%ul.list-inline.social-buttons
+            -#  %li
+            -#    %a{:href => "#"}
+            -#      %i.fa.fa-twitter
+            -#  %li
+            -#    %a{:href => "#"}
+            -#      %i.fa.fa-facebook
+            -#  %li
+            -#    %a{:href => "#"}
+            -#      %i.fa.fa-linkedin
             .col-sm-4
               .team-member
                 %img.img-responsive.img-circle{:alt => "", :src => "assets/vinayak.png"}
@@ -271,45 +217,110 @@
                   %h4 Varsha Mule - Kusalkar
                   %p.text-muted Co-Founder & Trustee
           .row
-            .col-sm-4
+            .col-sm-6
               .team-member
                 %img.img-responsive.img-circle{:alt => "", :src => "assets/zaheer.png"}
                   %h4 Dr.Zaheer Mujawar
                   %p.text-muted Trustee & Core Volunteer
 
-            .col-sm-4
+            .col-sm-6
               .team-member
                 %img.img-responsive.img-circle{:alt => "", :src => "assets/sonali.png"}
                   %h4 Sonali Kale
                   %p.text-muted Trustee & Core Volunteer
 
-            .col-sm-4
-              .team-member
-                %img.img-responsive.img-circle{:alt => "", :src => "assets/arvind.png"}
-                  %h4 Arvind Daund
-                  %p.text-muted Trustee & Core Volunteer
+    %section#become_volunteer
+      .container
+        .row
+          .col-lg-12
+            %h2.text-center.section-heading Yuvaan Sewavrati (Volunteers)
+            %p.class_justify
+              ‘Yuvaan’ is building up the youth and inculcating in them social sensitivity, love for the country aand a humane perspective without any kind of caste or religion based discrimination. The Yuvaan Sewavrati Movement is aimed at bringing about constructive change. Through this movement the youth are provided with opportunities to participate in the State and National level youth camps and contribute in various activities of social organisations as ‘Yuvaan Sewavrati’ (volunteers). ‘Yuvaan Movement ‘ enriches and deepens the awareness of social responsibilities among the youth and inspires them to lead a life of hope. ‘Yuvaan’ believes that by increasing the participation of the youth in youth empowerment and constructive activities we  can surely realize the dream of a developed progressive India.
+            %p
+              %b
+                %i
+                  To become a volunteer of YUVAAN
+                  %a{href: 'http://goo.gl/forms/B2KRgTS1gx', target: '_blank'} Click Here
 
-    / About Section
-    %section#about
+    / News and Events Section
+    %section#news_and_events.bg-light-gray
       .container
         .row
           .col-lg-12.text-center
-            %h2.section-heading About
-            %h3.section-subheading.text-muted
-              %b Empowering youth, Empowering Nation
-          .col-lg-12
-            %p.intro-text  The youth who were inspired by Swami Vivekanand, India’s ex-President Dr. A.P.J. Abdul Kalaam and especially guided by Gandhian Dr. S. N. Subbarao , and who have also been successful in various field, have come together to form the volunteer youth organization, Yuvaan in September 2013. ‘Yuvaan’ provides socially and economically underprivileged orphaned students educational material, career guidance, vocational skills training and lodging and meals  as the need be, free of cost. ‘Yuvaan’ specially focuses its activities to inculcate social sensitivity, brotherhood, love for the country and a humane perspective without discrimination. ‘Yuvaan’ aims to build up the nation by building up character.
+            %h2.section-heading News and Events
         .row
-          .col-lg-12
-            %ul.timeline
-              %li
-                .timeline-image
-                  %img{:alt => "", :src => "assets/foundation.JPG"}
-                .timeline-panel
-                  .timeline-heading
-                    %h4 November 1, 2013
-                  .timeline-body
-                    %p.text-muted Dr. S. N. Subbarao inaugurating the Yuvaan, Youth Empowerment Center
+          %script{:src => "fancybox/jquery.fancybox.pack.js", :type => "text/javascript"}
+          %marquee{:bgcolor => "light-gray", direction: 'left', onmousedown: "this.stop();" , onmouseup:"this.start();"}
+            %a.fancybox{:href => "assets/news1.jpg"}
+              %img{:alt => "", :src => "assets/news1_thumb.png"}
+            %a.fancybox{:href => "assets/news2.jpg"}
+              %img{:alt => "", :src => "assets/news2_thumb.png"}
+            %a.fancybox{:href => "assets/news3.jpg"}
+              %img{:alt => "", :src => "assets/news3_thumb.png"}
+            %a.fancybox{:href => "assets/news4.jpg"}
+              %img{:alt => "", :src => "assets/news4_thumb.png"}
+            %a.fancybox{:href => "assets/news5.jpg"}
+              %img{:alt => "", :src => "assets/news5_thumb.png"}
+            %a.fancybox{:href => "assets/news6.jpg"}
+              %img{:alt => "", :src => "assets/news6_thumb.png"}
+            %a.fancybox{:href => "assets/news7.jpg"}
+              %img{:alt => "", :src => "assets/news7_thumb.png"}
+            %a.fancybox{:href => "assets/news8.jpg"}
+              %img{:alt => "", :src => "assets/news8_thumb.png"}
+            %a.fancybox{:href => "assets/news9.jpg"}
+              %img{:alt => "", :src => "assets/news9_thumb.png"}
+            %a.fancybox{:href => "assets/news10.jpg"}
+              %img{:alt => "", :src => "assets/news10_thumb.png"}
+            %a.fancybox{:href => "assets/news11.jpg"}
+              %img{:alt => "", :src => "assets/news11_thumb.png"}
+            %a.fancybox{:href => "assets/news12.jpg"}
+              %img{:alt => "", :src => "assets/news12_thumb.png"}
+            %a.fancybox{:href => "assets/news13.jpg"}
+              %img{:alt => "", :src => "assets/news13_thumb.png"}
+            %a.fancybox{:href => "assets/news14.jpg"}
+              %img{:alt => "", :src => "assets/news14_thumb.png"}
+            %a.fancybox{:href => "assets/news15.jpg"}
+              %img{:alt => "", :src => "assets/news15_thumb.png"}
+            %a.fancybox{:href => "assets/news16.jpg"}
+              %img{:alt => "", :src => "assets/news16_thumb.png"}
+            %a.fancybox{:href => "assets/news17.jpg"}
+              %img{:alt => "", :src => "assets/news17_thumb.png"}
+
+            -#%img.img-responsive{:alt => "", :src => "assets/news2.jpg"}
+            -#%img.img-responsive{:alt => "", :src => "assets/news3.jpg"}
+            -#%img.img-responsive{:alt => "", :src => "assets/news4.jpg"}
+            -#%img.img-responsive{:alt => "", :src => "assets/news5.jpg"}
+            -#%img.img-responsive{:alt => "", :src => "assets/news6.jpg"}
+            -#%img.img-responsive{:alt => "", :src => "assets/news7.jpg"}
+            -#.col-md-4.col-sm-6.portfolio-item
+            -#  %img.img-responsive{:alt => "", :src => "assets/news8.jpg"}
+            -#.col-md-4.col-sm-6
+            -#  %img.img-responsive{:alt => "", :src => "assets/news9.jpg"}
+            -#.col-md-4.col-sm-6.portfolio-item
+            -#  %img.img-responsive{:alt => "", :src => "assets/news10.jpg"}
+            -#.col-md-4.col-sm-6
+            -#  %img.img-responsive{:alt => "", :src => "assets/news11.jpg"}
+            -#.col-md-4.col-sm-6.portfolio-item
+            -#  %img.img-responsive{:alt => "", :src => "assets/news12.jpg"}
+            -#.col-md-4.col-sm-6
+            -#  %img.img-responsive{:alt => "", :src => "assets/news13.jpg"}
+            -#.col-md-4.col-sm-6.portfolio-item
+            -#  %img.img-responsive{:alt => "", :src => "assets/news14.jpg"}
+            -#.col-md-4.col-sm-6
+            -#  %img.img-responsive{:alt => "", :src => "assets/news15.jpg"}
+            -#.col-md-4.col-sm-6.portfolio-item
+            -#  %img.img-responsive{:alt => "", :src => "assets/news16.jpg"}
+            -#.col-md-4.col-sm-6
+            -#  %img.img-responsive{:alt => "", :src => "assets/news17.jpg"}
+            -#.col-md-4.col-sm-6.portfolio-item
+            -#  %img.img-responsive{:alt => "", :src => "assets/news18.jpg"}
+            -#.col-md-4.col-sm-6
+            -#  %img.img-responsive{:alt => "", :src => "assets/news19.jpg"}
+            -#.col-md-4.col-sm-6.portfolio-item
+            -#  %img.img-responsive{:alt => "", :src => "assets/news20.jpg"}
+            -#.col-md-4.col-sm-6.portfolio-item
+            -#  %img.img-responsive{:alt => "", :src => "assets/news21.jpg"}
+
     %section#success-stories
       .container
         .row

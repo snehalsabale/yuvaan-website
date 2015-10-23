@@ -35,7 +35,9 @@ body {
 .class_justify{
     text-align: justify;
 }
-
+.programs_img img{
+    width: 100%;
+}
 
 .part img{
     margin-left: auto;
@@ -46,6 +48,16 @@ body {
 .timeline-image img{
     width: 415%;
     height: 207%;
+}
+
+.ideal-img img{
+    margin-left:auto;
+    margin-right: auto;
+    display: block;
+}
+
+.ideal-img{
+    padding-bottom: 2%;
 }
 
 .intro-text{
@@ -211,10 +223,19 @@ fieldset[disabled] .btn-xl.active {
     color: #fed136;
     background-color: #fff;
 }
-
+.nav_bar_custom{
+    display:inline-flex;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.nav_bar_custom img{
+    height:100px;
+}
 .navbar-default {
     border-color: transparent;
     background-color: #222;
+    padding-top: 6px;
 }
 
 .navbar-default .navbar-brand {
@@ -275,7 +296,6 @@ fieldset[disabled] .btn-xl.active {
 
 @media(min-width:768px) {
     .navbar-default {
-        padding: 25px 0;
         border: 0;
         background-color: transparent;
         -webkit-transition: padding .3s;

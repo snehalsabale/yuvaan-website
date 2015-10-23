@@ -11,6 +11,20 @@
 // about supported directives.
 //
 //= require jquery
+//= require fancybox
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+jQuery(function() {
+    $("a.fancybox").fancybox({
+        openEffect	: 'elastic',
+        closeEffect	: 'elastic',
+
+        helpers: {
+            title : {
+                type : 'float'
+            }
+        }
+    });
+});
