@@ -50,6 +50,40 @@ body {
     height: 207%;
 }
 
+.volunteer{
+    font-size: 1.2em;
+}
+
+#donate-btn{
+    margin-top: 12%;
+    margin-left: 20%;
+}
+
+.impact-factor{
+    text-align: -webkit-right;
+}
+a.canvasjs-chart-credit{
+    display:none;
+}
+.carousel-inner>.item>img{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 100px;
+}
+.news_images img{
+    margin-right: 20px;
+}
+.impact_class_1{
+    margin-left:auto;
+    margin-right: auto;
+    dislplay: block;
+}
+.centeredcontainer {
+    width:180px;
+    margin:0 auto 25px;
+}
+
 .ideal-img img{
     margin-left:auto;
     margin-right: auto;
@@ -228,6 +262,7 @@ fieldset[disabled] .btn-xl.active {
     margin-left: auto;
     margin-right: auto;
     display: block;
+    width: 90%;
 }
 .nav_bar_custom img{
     height:100px;
@@ -694,10 +729,17 @@ section h3.section-subheading {
     margin-bottom: 50px;
     text-align: center;
 }
+.team-text{
+    text-align: justify;
+}
 
 .team-member img {
-    margin: 0 auto;
     border: 7px solid #fff;
+}
+
+.copyright{
+    color: white;
+    font-size: 1.5em;
 }
 
 .team-member h4 {
@@ -714,6 +756,9 @@ aside.clients img {
     margin: 50px auto;
 }
 
+.panel.gallery_panel{
+    border: 1px solid purple;
+}
 section#contact {
     background-color: #222;
     background-image: url(../img/map-image.png);

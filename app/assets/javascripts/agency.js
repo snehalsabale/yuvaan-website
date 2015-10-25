@@ -14,7 +14,62 @@ $(function() {
         event.preventDefault();
     });
 
-    $(".fancybox").fancybox();
+    window.onload = function () {
+        var chart = new CanvasJS.Chart("chartContainer",
+            {
+                zoomEnabled: false,
+                animationEnabled: true,
+                title:{
+                    text: "Volunteers"
+                },
+                axisY2:{
+                    maximum: 600,
+                    interval: 100,
+                    interlacedColor: "#F5F5F5",
+                    gridColor: "#D7D7D7",
+                    tickColor: "#D7D7D7"
+                },
+                theme: "theme2",
+                toolTip:{
+                    shared: true
+                },
+                legend:{
+                    verticalAlign: "bottom",
+                    horizontalAlign: "center",
+                    fontSize: 15,
+                    fontFamily: "Lucida Sans Unicode"
+
+                },
+                data: [
+                    {
+                        type: "line",
+                        lineThickness:3,
+                        axisYType:"secondary",
+                        showInLegend: true,
+                        name: "Volunteers",
+                        dataPoints: [
+                            { x: new Date(2013, 01), y: 150 },
+                            { x: new Date(2014, 01), y: 300 },
+                            { x: new Date(2015, 05), y: 478 },
+
+                        ]
+                    }
+                ],
+                legend: {
+                    cursor:"pointer",
+                    itemclick : function(e) {
+                        if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+                            e.dataSeries.visible = false;
+                        }
+                        else {
+                            e.dataSeries.visible = true;
+                        }
+                        chart.render();
+                    }
+                }
+            });
+        chart.render();
+    }
 });
 
 // Highlight the top nav as scrolling occurs

@@ -8,7 +8,7 @@
     %meta{:content => "", :name => "author"}
     %title Yuvaan
     %link{:href => "http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css", :rel => "stylesheet"}
-    %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"}
+    -#%script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"}
     %script{:src => "http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"}
     %link{:href => "assets/font-awesome.min.css", :rel => "stylesheet", :type => "text/css"}
     %link{:href => "https://fonts.googleapis.com/css?family=Montserrat:400,700", :rel => "stylesheet", :type => "text/css"}
@@ -23,9 +23,9 @@
   %body#page-top.index
     / Navigation
     %nav.navbar.navbar-default.navbar-fixed-top
-      .container.nav_bar_custom
+      .container-fluid.nav_bar_custom
         / Brand and toggle get grouped for better mobile display  display: inline-flex;
-        %img.navbar-brand.page-scroll{src: 'assets/logo.jpg',:href => "#page-top"}
+        %img.navbar-brand.page-scroll{src: 'assets/logo.png',:href => "#page-top"}
         .navbar-header.page-scroll
           %button.navbar-toggle{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
             -#%span.sr-only Toggle navigation
@@ -42,23 +42,30 @@
             %li
               %a.page-scroll{:href => "#programs"} Programs
             %li
+              %a.page-scroll{:href => "#impact"} Impact
+            %li
               %a.page-scroll{:href => "#team"} Team
             %li
               %a.page-scroll{:href => "#become_volunteer"} Become a Volunteer
             %li
               %a.page-scroll{:href => "#news_and_events"} News And Events
             %li
+              %a.page-scroll{:href => "gallery"} Gallery
+            %li
               %a.page-scroll{:href => "#contact"} Contact
+            %li
+              %button.btn.btn-info{:href => "#", id: 'donate-btn'} Donate
 
 
-            -#%li
+
+    -#%li
             -#  %a.page-scroll{:href => "#services"} Services
             -#
             -#%li
             -#  %a.page-scroll{:href => "#portfolio"} Portfolio
     / /.navbar-collapse
     / /.container-fluid
-    / Header
+    / Heade
     %header
       .container
         #myCarousel.carousel.slide{"data-ride" => "carousel"}
@@ -84,6 +91,8 @@
               %img{:alt => "Flower", :src => "assets/7.png"}
             .item
               %img{:alt => "Flower", :src => "assets/8.png"}
+            .item
+              %img{:alt => "Flower", :src => "assets/9.png"}
           / Left and right controls
           %a.left.carousel-control{"data-slide" => "prev", :href => "#myCarousel", :role => "button"}
             %span.glyphicon.glyphicon-chevron-left{"aria-hidden" => "true"}
@@ -91,6 +100,12 @@
           %a.right.carousel-control{"data-slide" => "next", :href => "#myCarousel", :role => "button"}
             %span.glyphicon.glyphicon-chevron-right{"aria-hidden" => "true"}
             %span.sr-only Next
+          .container
+            .row
+              .col-lg-12.text-center
+                %h3.section-subheading.text-muted
+                  %b Every youth have equal opportunity for higher education and employment regardless of their social-economical status.
+
     / About Section
     %section#about
       .container
@@ -130,20 +145,54 @@
             %h3.section-subheading.text-muted  We Aims to Build up the Nation by Building up Character.
         .row.text-center
           .col-md-4.programs_img
-            %img{src: 'assets/career_dev.jpg'}
-            %h4.service-heading Yuvaan’s Centre For Career Development
-            %p.text-muted.text-justify ‘Yuvaan’s Centre for Career Development’ is providing unemployed youth training & career guidance for employment in Government and Private sectors.  Today 750+ youngsters have been already benefitted by the career guidance workshop & skill development training provided by the Centre and given their life a better direction. Last year, we have started “Competitive Exam Guidance Centre” with Library & Study Room facility also.
-            %p.text-muted.text-justify The library has number of latest & excellent books on all types of Competitive exams including UPSC, MPSC, Police, Railway, Bank recruitment etc with several magazines & newspapers also. We aim to give skill development training & employment to 500 unemployed youths & make 50 honest young officer & servant for Government system within next 4 years.
-          .col-md-4.programs_img
             %img{src: 'assets/youth_empowerment.jpg'}
             %h4.service-heading Dr. S. N. Subbarao ‘ Youth Empowerment Centre’
             %p.text-muted.text-justify According to government rules, orphans have to leave the orphanages after they are 18 years old. Their dreams remain unfulfilled as they step out into the world without any hope of support. They are forced by their circumstances to take up any kind of job they get in order to earn their living even though they would like to take up higher education . It is obvious that they are deprived of equal opportunities of education and employment.
             %p.text-muted.text-justify The centre has extended a helping hand to such youth. The centre has 32 students ( 24 boys & 8 girls) and aims to extend its support to 100 orphan , needy students with education, lodging, employment, vocational skills through adopting their responsibility within next 3 year. We are trying to create 100 ROLE MODELS within next 5 years among orphan, deprived students. It will inspire other deprived students also to work for their better career & future.
           .col-md-4.programs_img
+            %img{src: 'assets/career_dev.jpg'}
+            %h4.service-heading Yuvaan’s Centre For Career Development
+            %p.text-muted.text-justify ‘Yuvaan’s Centre for Career Development’ is providing unemployed youth training & career guidance for employment in Government and Private sectors.  Today 750+ youngsters have been already benefitted by the career guidance workshop & skill development training provided by the Centre and given their life a better direction. Last year, we have started “Competitive Exam Guidance Centre” with Library & Study Room facility also.
+            %p.text-muted.text-justify The library has number of latest & excellent books on all types of Competitive exams including UPSC, MPSC, Police, Railway, Bank recruitment etc with several magazines & newspapers also. We aim to give skill development training & employment to 500 unemployed youths & make 50 honest young officer & servant for Government system within next 4 years.
+          .col-md-4.programs_img
             %img{src: 'assets/movement.png'}
             %h4.service-heading The Yuvaan Movement
             %p.text-muted.text-justify ‘Yuvaan’ is building up the youth and inculcating in them social sensitivity, love for the country and a humane perspective without any kind of caste or religion based discrimination. The Yuvaan Movement is aimed at bringing about constructive change. Through this movement the youth are provided with opportunities to participate in the State and National level youth camps and contribute in various activities of social organisations as ‘Yuvaan’ volunteers.
             %p.text-muted.text-justify ‘Yuvaan Movement ‘ enriches and deepens the awareness of social responsibilities among the youth and inspires them to lead a life of hope. ‘Yuvaan’ believes that by increasing the participation of the youth in youth empowerment and constructive activities we  can surely realize the dream of a developed progressive India.
+
+    %section#impact
+      .container
+        .row
+          .col-lg-12.text-center
+            %h2.section-heading Impact
+          :javascript
+            $(document).ready(function() {
+                $('#myStathalf').circliful();
+                $('#myStat').circliful();
+                $('#myStathalf2').circliful();
+                $('#myStat2').circliful();
+                $('#myStat3').circliful();
+                $('#myStat4').circliful();
+                $('#myStathalf3').circliful();
+                });
+        .row.text-center
+          .col-md-12.impact_class_1
+            %h3.section-subheading.text-muted
+              %b How we spend our money
+
+            .col-md-4.impact-factor
+              #myStat{"data-bgcolor" => "#eee", "data-dimension" => "250", "data-fgcolor" => "#61a9dc", "data-fill" => "#ddd", "data-fontsize" => "38", "data-info" => "Programs", "data-percent" => "95", "data-text" => "95%", "data-width" => "30"}
+            .col-md-4.impact-factor
+              #myStat2{"data-bgcolor" => "#eee", "data-dimension" => "250", "data-fgcolor" => "#7ea568", "data-fontsize" => "38", "data-info" => "Operations", "data-percent" => "5", "data-text" => "5%", "data-width" => "30"}
+            .col-md-4.impact-factor
+              #myStat4{"data-bgcolor" => "#eee", "data-dimension" => "250", "data-fgcolor" => "#7ea568", "data-fontsize" => "38", "data-info" => "Youths got proper direction", "data-percent" => "95", "data-text" => "95%", "data-width" => "30"}
+          .col-md-12
+            .col-md-6
+              #chartContainer{:style => "height: 320px; width: 400px;"}
+            .col-md-6
+              %img{src: 'assets/people.png'}
+              %h3.section-subheading.text-muted
+                %b 1265 young people impacted in the year 2014-2015
     / Team Section
     %section#team.bg-light-gray
       .container
@@ -152,82 +201,96 @@
             %h2.section-heading Our Amazing Team
 
         .row
-          .col-sm-4
+          .col-sm-3
             .team-member
               %img.img-responsive.img-circle{:alt => "", :src => "assets/sandip.png"}
                 %h4 Sandip Kusalkar
                 %p.text-muted Founder & President
+          .col-sm-3
+            %p.team-text Sandip is the founder & President of Yuvaan. He comes with deep grassroots level experience of working with children, women and young people for over 8 years. He is passionate about his work  and always optimistic in every condition. He attracts & involve people especially young people in his work with his few unparalleled qualities. Sandip has completed his Master degree in Social Work from Tilak Maharashtra University, Pune.
 
-          .col-sm-4
+          .col-sm-3
             .team-member
               %img.img-responsive.img-circle{:alt => "", :src => "assets/suresh.png"}
                 %h4 Suresh Maid
                 %p.text-muted Co-Founder & Secretory
-
-          .col-sm-4
+          .col-sm-3
+            %p.team-text Suresh is co-founder & Secretory of Yuvaan. He was press photographer & journalist. He actively worked various renown movement & organization like Rashtra Seva Dal, Anna Hazare led Bhrashtachar Virodhi Jan Andolan, India Against Corruption Movement etc. He is very energetic & active social worker. By driving his business Suravi Digital Photo Lab & Cristal Vision well, he draws his valuable time for Yuvaan’s constructive work also regularly. He completed his Master of Journalism degree from Pune University.
+        .row
+          .col-sm-3
             .team-member
               %img.img-responsive.img-circle{:alt => "", :src => "assets/prasanna.png"}
                 %h4 Prasanna Bora
                 %p.text-muted Co-Founder & Asst. Secretory
+          .col-sm-3
+            %p.team-text Prasanna is co-founder & Asst. Secretory of Yuvaan. He is well known caterers by profession but he always draw his valuable time for social activities with Yuvaan. He is very energetic & keep the team spirit alive always. He is graduated from  Pune University & Diploma Holder in Catering Services. His whole heart support to Yuvaan’s activities makes it effective & remarkable.
 
-          .row
-            .col-sm-4
-              .team-member
-                %img.img-responsive.img-circle{:alt => "", :src => "assets/rakesh.png"}
-                  %h4 Rakesh Gore
-                  %p.text-muted Co-Founder & Trustee
-            -#%ul.list-inline.social-buttons
-            -#  %li
-            -#    %a{:href => "#"}
-            -#      %i.fa.fa-twitter
-            -#  %li
-            -#    %a{:href => "#"}
-            -#      %i.fa.fa-facebook
-            -#  %li
-            -#    %a{:href => "#"}
-            -#      %i.fa.fa-linkedin
-            .col-sm-4
-              .team-member
-                %img.img-responsive.img-circle{:alt => "", :src => "assets/vinayak.png"}
-                  %h4 Adv. Vinayak Sangle
-                  %p.text-muted Trustee & Legal Adviser
+          .col-sm-3
+            .team-member
+              %img.img-responsive.img-circle{:alt => "", :src => "assets/rakesh.png"}
+                %h4 Rakesh Gore
+                %p.text-muted Co-Founder & Truste
+          .col-sm-3
+            %p.team-text Rakesh is a engineering graduate but having very deep social conscious. He did various innovative social activities with his engineering studies at college level. He is a dreamer & believer in grass root level work. He actively involves & motivate his friends also in nation building activities.
+        .row
+          .col-sm-3
+            .team-member
+              %img.img-responsive.img-circle{:alt => "", :src => "assets/vinayak.png"}
+                %h4 Adv. Vinayak Sangle
+                %p.text-muted Trustee & Legal Adviser
+          .col-sm-3
+            %p.team-text He is a trustee & legal adviser of Yuvaan. He has 15 year experience in legal field. He works in Ahmednagar District Court. He is vice president of Ahmedngar NGO’s Aid Bar Association. He completed his Law degree from Pune University
 
-            .col-sm-4
-              .team-member
-                %img.img-responsive.img-circle{:alt => "", :src => "assets/dagdu.png"}
-                  %h4 Dagdu Lomte
-                  %p.text-muted Vice President
+          .col-sm-3
+            .team-member
+              %img.img-responsive.img-circle{:alt => "", :src => "assets/dagdu.png"}
+                %h4 Dagdu Lomte
+                %p.text-muted Vice President
+          .col-sm-3
+            %p.team-text Mr. Dagdu Lomte is vice president of Yuvaan. He is writer & hard core social worker also. He ridded bicycle with great social worker Late. Baba Amte from Kashmir to Kanyakumari. He has big public, artist, writer, social worker network. He has special interest in literature & social work. He runs a cultural movement in a rural area of Maharashtra state effectively.
 
-          .row
-            .col-sm-4
-              .team-member
-                %img.img-responsive.img-circle{:alt => "", :src => "assets/satish.png"}
-                  %h4 Satish Yeole
-                  %p.text-muted Trustee & Core Volunteer
+        .row
+          .col-sm-3
+            .team-member
+              %img.img-responsive.img-circle{:alt => "", :src => "assets/satish.png"}
+                %h4 Satish Yeole
+                %p.text-muted Trustee & Core Volunteer
+          .col-sm-3
+            %p.team-text Satish is a trustee & core volunteer of Yuvaan.  He is self motivated & dedicated towards social cause. He completed his B.C.S. (Bachelor Of Computer Science)  from Pune University.
 
-            .col-sm-4
-              .team-member
-                %img.img-responsive.img-circle{:alt => "", :src => "assets/snehal.png"}
-                  %h4 Snehal Sabale
-                  %p.text-muted Co-Founder & Trustee
+          .col-sm-3
+            .team-member
+              %img.img-responsive.img-circle{:alt => "", :src => "assets/snehal.png"}
+                %h4 Snehal Sabale
+                %p.text-muted Co-Founder & Trustee
+          .col-sm-3
+            %p.team-text She completed her computer engineering degree from Pune University with distinction. She is working with team Yuvaan since her college days. She has deep social conscious & always give her valuable time, share her knowledge & work dedicatedly for the task given to her. She is working with Persistent Technology as a Software Engineer at Pune.
 
-            .col-sm-4
-              .team-member
-                %img.img-responsive.img-circle{:alt => "", :src => "assets/varsha.png"}
-                  %h4 Varsha Mule - Kusalkar
-                  %p.text-muted Co-Founder & Trustee
-          .row
-            .col-sm-6
-              .team-member
-                %img.img-responsive.img-circle{:alt => "", :src => "assets/zaheer.png"}
-                  %h4 Dr.Zaheer Mujawar
-                  %p.text-muted Trustee & Core Volunteer
+        .row
+          .col-sm-3
+            .team-member
+              %img.img-responsive.img-circle{:alt => "", :src => "assets/varsha.png"}
+                %h4 Varsha Mule - Kusalkar
+                %p.text-muted Co-Founder & Trustee
+          .col-sm-3
+            %p.team-text Mrs. Varsha Mule- Kusalkar is a civil engineering graduate from Dr.D.Y. Patil Engineering College, Pune. She is working as a core volunteer since last 5 years with team Yuvaan. She is sensitive & share her time, knowledge, skill with Yuvaan’s activities regularly. She is working as Professor at Govt.Polytechnic, Ahmednagar & also doing her Master Degree in Structural Engineering at Ahmednagar.
 
-            .col-sm-6
-              .team-member
-                %img.img-responsive.img-circle{:alt => "", :src => "assets/sonali.png"}
-                  %h4 Sonali Kale
-                  %p.text-muted Trustee & Core Volunteer
+          .col-sm-3
+            .team-member
+              %img.img-responsive.img-circle{:alt => "", :src => "assets/zaheer.png"}
+                %h4 Dr.Zaheer Mujawar
+                %p.text-muted Trustee & Core Volunteer
+          .col-sm-3
+            %p.team-text Zaheer completed his BAMS degree from Rajiv Gandhi University of Health Sciences(RGUHS),Bangalore. He has completed his Ph.D from Nagpur University. As a residence of Ahmednagar he works on health, peace & poverty issues.
+
+        .row
+          .col-sm-3
+            .team-member
+              %img.img-responsive.img-circle{:alt => "", :src => "assets/sonali.png"}
+                %h4 Sonali Kale
+                %p.text-muted Trustee & Core Volunteer
+          .col-sm-3
+            %p.team-text She completed her mechanical engineering degree from Government Engineering College, Avsari Dist. Pune with distinction. She is working as volunteer with team Yuvaan since her college days. She is sensitive & dedicated towards her work. She is working as Professor at Govt.Polytechnic, Ahmednagar.
 
     %section#become_volunteer
       .container
@@ -236,11 +299,14 @@
             %h2.text-center.section-heading Yuvaan Sewavrati (Volunteers)
             %p.class_justify
               ‘Yuvaan’ is building up the youth and inculcating in them social sensitivity, love for the country aand a humane perspective without any kind of caste or religion based discrimination. The Yuvaan Sewavrati Movement is aimed at bringing about constructive change. Through this movement the youth are provided with opportunities to participate in the State and National level youth camps and contribute in various activities of social organisations as ‘Yuvaan Sewavrati’ (volunteers). ‘Yuvaan Movement ‘ enriches and deepens the awareness of social responsibilities among the youth and inspires them to lead a life of hope. ‘Yuvaan’ believes that by increasing the participation of the youth in youth empowerment and constructive activities we  can surely realize the dream of a developed progressive India.
-            %p
+            %p.volunteer
               %b
                 %i
                   To become a volunteer of YUVAAN
                   %a{href: 'http://goo.gl/forms/B2KRgTS1gx', target: '_blank'} Click Here
+          .col-lg-12
+            %img{src: 'assets/core_team.png'}
+            %h3.section-subheading.text-muted.text-center  Oue Core Team of Dedicated Volunteers.
 
     / News and Events Section
     %section#news_and_events.bg-light-gray
@@ -248,8 +314,7 @@
         .row
           .col-lg-12.text-center
             %h2.section-heading News and Events
-        .row
-          %script{:src => "fancybox/jquery.fancybox.pack.js", :type => "text/javascript"}
+        .row.news_images
           %marquee{:bgcolor => "light-gray", direction: 'left', onmousedown: "this.stop();" , onmouseup:"this.start();"}
             %a.fancybox{:href => "assets/news1.jpg"}
               %img{:alt => "", :src => "assets/news1_thumb.png"}
@@ -268,7 +333,7 @@
             %a.fancybox{:href => "assets/news8.jpg"}
               %img{:alt => "", :src => "assets/news8_thumb.png"}
             %a.fancybox{:href => "assets/news9.jpg"}
-              %img{:alt => "", :src => "assets/news9_thumb.png"}
+              %img{:alt => "", :src => "assets/news9_thumb.jpg"}
             %a.fancybox{:href => "assets/news10.jpg"}
               %img{:alt => "", :src => "assets/news10_thumb.png"}
             %a.fancybox{:href => "assets/news11.jpg"}
@@ -285,41 +350,14 @@
               %img{:alt => "", :src => "assets/news16_thumb.png"}
             %a.fancybox{:href => "assets/news17.jpg"}
               %img{:alt => "", :src => "assets/news17_thumb.png"}
-
-            -#%img.img-responsive{:alt => "", :src => "assets/news2.jpg"}
-            -#%img.img-responsive{:alt => "", :src => "assets/news3.jpg"}
-            -#%img.img-responsive{:alt => "", :src => "assets/news4.jpg"}
-            -#%img.img-responsive{:alt => "", :src => "assets/news5.jpg"}
-            -#%img.img-responsive{:alt => "", :src => "assets/news6.jpg"}
-            -#%img.img-responsive{:alt => "", :src => "assets/news7.jpg"}
-            -#.col-md-4.col-sm-6.portfolio-item
-            -#  %img.img-responsive{:alt => "", :src => "assets/news8.jpg"}
-            -#.col-md-4.col-sm-6
-            -#  %img.img-responsive{:alt => "", :src => "assets/news9.jpg"}
-            -#.col-md-4.col-sm-6.portfolio-item
-            -#  %img.img-responsive{:alt => "", :src => "assets/news10.jpg"}
-            -#.col-md-4.col-sm-6
-            -#  %img.img-responsive{:alt => "", :src => "assets/news11.jpg"}
-            -#.col-md-4.col-sm-6.portfolio-item
-            -#  %img.img-responsive{:alt => "", :src => "assets/news12.jpg"}
-            -#.col-md-4.col-sm-6
-            -#  %img.img-responsive{:alt => "", :src => "assets/news13.jpg"}
-            -#.col-md-4.col-sm-6.portfolio-item
-            -#  %img.img-responsive{:alt => "", :src => "assets/news14.jpg"}
-            -#.col-md-4.col-sm-6
-            -#  %img.img-responsive{:alt => "", :src => "assets/news15.jpg"}
-            -#.col-md-4.col-sm-6.portfolio-item
-            -#  %img.img-responsive{:alt => "", :src => "assets/news16.jpg"}
-            -#.col-md-4.col-sm-6
-            -#  %img.img-responsive{:alt => "", :src => "assets/news17.jpg"}
-            -#.col-md-4.col-sm-6.portfolio-item
-            -#  %img.img-responsive{:alt => "", :src => "assets/news18.jpg"}
-            -#.col-md-4.col-sm-6
-            -#  %img.img-responsive{:alt => "", :src => "assets/news19.jpg"}
-            -#.col-md-4.col-sm-6.portfolio-item
-            -#  %img.img-responsive{:alt => "", :src => "assets/news20.jpg"}
-            -#.col-md-4.col-sm-6.portfolio-item
-            -#  %img.img-responsive{:alt => "", :src => "assets/news21.jpg"}
+            %a.fancybox{:href => "assets/news18.jpg"}
+              %img{:alt => "", :src => "assets/news18_thumb.png"}
+            %a.fancybox{:href => "assets/news19.jpg"}
+              %img{:alt => "", :src => "assets/news19_thumb.png"}
+            %a.fancybox{:href => "assets/new20.jpg"}
+              %img{:alt => "", :src => "assets/news20_thumb.png"}
+            %a.fancybox{:href => "assets/news21.jpg"}
+              %img{:alt => "", :src => "assets/news21_thumb.png"}
 
     %section#success-stories
       .container
@@ -448,7 +486,7 @@
       .container
         .row
           .col-md-4
-            %span.copyright Copyright &copy; Your Website 2014
+            %span.copyright Copyright@yuvaanindia.org
           .col-md-4
             %ul.list-inline.social-buttons
               %li
@@ -626,12 +664,12 @@
                     %i.fa.fa-times
                     Close Project
     / jQuery
-    %script{:src => "assets/jquery.js"}
+    -#%script{:src => "assets/jquery.js"}
     / Bootstrap Core JavaScript
-    %script{:src => "assets/bootstrap.min.js"}
+    -#%script{:src => "assets/bootstrap.min.js"}
     / Plugin JavaScript
     %script{:src => "http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"}
-    %script{:src => "assets/classie.js"}
+    -#%script{:src => "assets/classie.js"}
     %script{:src => "assets/cbpAnimatedHeader.js"}
     / Contact Form JavaScript
     %script{:src => "assets/jqBootstrapValidation.js"}

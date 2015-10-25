@@ -11,13 +11,17 @@
 // about supported directives.
 //
 //= require jquery
-//= require fancybox
 //= require jquery_ujs
+//= require jquery.fancybox.pack
+//= require jquery.circliful
+//= require jquery.circliful.min
+//= require canvasjs.min
 //= require turbolinks
 //= require_tree .
 
 jQuery(function() {
-    $("a.fancybox").fancybox({
+    $('[data-toggle="tooltip"]').tooltip()
+    $('.fancybox').fancybox({
         openEffect	: 'elastic',
         closeEffect	: 'elastic',
 

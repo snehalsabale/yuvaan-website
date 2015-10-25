@@ -1,0 +1,214 @@
+%head
+  %script{:src => "http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"}
+  -#%script{:src => "assets/classie.js"}
+  %script{:src => "assets/cbpAnimatedHeader.js"}
+  / Contact Form JavaScript
+  %script{:src => "assets/jqBootstrapValidation.js"}
+  %script{:src => "assets/contact_me.js"}
+  / Custom Theme JavaScript
+  %script{:src => "assets/agency.js"}
+  %link{:href => "http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css", :rel => "stylesheet"}
+  -#%script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"}
+  %script{:src => "http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"}
+  %link{:href => "assets/font-awesome.min.css", :rel => "stylesheet", :type => "text/css"}
+  %link{:href => "https://fonts.googleapis.com/css?family=Montserrat:400,700", :rel => "stylesheet", :type => "text/css"}
+  %link{:href => "https://fonts.googleapis.com/css?family=Kaushan+Script", :rel => "stylesheet", :type => "text/css"}
+  %link{:href => "https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic", :rel => "stylesheet", :type => "text/css"}
+  %link{:href => "https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700", :rel => "stylesheet", :type => "text/css"}
+  / HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+  -#  / WARNING: Respond.js doesn't work if you view the page via file://
+  -#  /[if lt IE 9]
+  %script {src: "https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"}
+  %script {src: "https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"}
+
+%body#page-top.index
+  / Navigation
+  %nav.navbar.navbar-default.navbar-fixed-top{style: 'background-color:black;'}
+    .container-fluid.nav_bar_custom
+      / Brand and toggle get grouped for better mobile display  display: inline-flex;
+      %img.navbar-brand.page-scroll{src: 'assets/logo.png',:href => "#page-top"}
+      .navbar-header.page-scroll
+        %button.navbar-toggle{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+      -#%span.sr-only Toggle navigation
+      -#%span.icon-bar
+      -#%span.icon-bar
+      -#%span.icon-bar
+      / Collect the nav links, forms, and other content for toggling
+      #bs-example-navbar-collapse-1.collapse.navbar-collapse
+        %ul.nav.navbar-nav.navbar-right
+          %li.hidden
+            %a{:href => "#page-top"}
+          %li
+            %a.page-scroll{:href => "/#about"} About
+          %li
+            %a.page-scroll{:href => "/#programs"} Programs
+          %li
+            %a.page-scroll{:href => "/#impact"} Impact
+          %li
+            %a.page-scroll{:href => "/#team"} Team
+          %li
+            %a.page-scroll{:href => "/#become_volunteer"} Become a Volunteer
+          %li
+            %a.page-scroll{:href => "/#news_and_events"} News And Events
+          %li.active
+            %a.page-scroll{:href => "gallery"} Gallery
+          %li
+            %a.page-scroll{:href => "/#contact"} Contact
+          %li
+            %button.btn.btn-info{:href => "#", id: 'donate-btn'} Donate
+
+  / About Section
+  %section#gallery
+    .container
+      .row
+        .col-lg-12.text-center
+          %h2.section-heading Photo Gallery
+          %h3.section-subheading.text-muted
+            %b Empowering youth, Empowering Nation
+      .panel.gallery_panel
+        .panel-heading
+          Image Gallery
+        .panel-body
+          .row.news_images
+            %a.fancybox{:href => "assets/awards/award1.jpg"}
+              %img{:alt => "", :src => "assets/awards/award1_thumb.png"}
+            %a.fancybox{:href => "assets/awards/award2.jpg"}
+              %img{:alt => "", :src => "assets/awards/award2_thumb.png"}
+            %a.fancybox{:href => "assets/awards/award3.jpg"}
+              %img{:alt => "", :src => "assets/awards/award3_thumb.png"}
+            %a.fancybox{:href => "assets/awards/award4.jpg"}
+              %img{:alt => "", :src => "assets/awards/award4_thumb.png"}
+            %a.fancybox{:href => "assets/activity/activity1.jpg"}
+              %img{:alt => "", :src => "assets/activity/activity1_thumb.png"}
+            %a.fancybox{:href => "assets/activity/activity2.jpg"}
+              %img{:alt => "", :src => "assets/activity/activity2_thumb.png"}
+            %a.fancybox{:href => "assets/activity/activity3.jpg"}
+              %img{:alt => "", :src => "assets/activity/activity3_thumb.png"}
+            %a.fancybox{:href => "assets/activity/activity4.jpg"}
+              %img{:alt => "", :src => "assets/activity/activity4_thumb.png"}
+            %a.fancybox{:href => "assets/activity/activity5.jpg"}
+              %img{:alt => "", :src => "assets/activity/activity5_thumb.png"}
+            %a.fancybox{:href => "assets/activity/activity6.jpg"}
+              %img{:alt => "", :src => "assets/activity/activity6_thumb.png"}
+            %a.fancybox{:href => "assets/activity/activity7.jpg"}
+              %img{:alt => "", :src => "assets/activity/activity7_thumb.png"}
+            %a.fancybox{:href => "assets/career/career1.jpg"}
+              %img{:alt => "", :src => "assets/career/career_thumb1.png"}
+            %a.fancybox{:href => "assets/career/career2.jpg"}
+              %img{:alt => "", :src => "assets/career/career_thumb2.png"}
+            %a.fancybox{:href => "assets/career/career3.jpg"}
+              %img{:alt => "", :src => "assets/career/career_thumb3.png"}
+            %a.fancybox{:href => "assets/career/career4.jpg"}
+              %img{:alt => "", :src => "assets/career/career_thumb4.png"}
+            %a.fancybox{:href => "assets/career/career5.jpg"}
+              %img{:alt => "", :src => "assets/career/career_thumb5.png"}
+            %a.fancybox{:href => "assets/career/career6.jpg"}
+              %img{:alt => "", :src => "assets/career/career_thumb6.png"}
+            %a.fancybox{:href => "assets/career/career7.jpg"}
+              %img{:alt => "", :src => "assets/career/career_thumb7.png"}
+            %a.fancybox{:href => "assets/career/career8.jpg"}
+              %img{:alt => "", :src => "assets/career/career_thumb8.png"}
+            %a.fancybox{:href => "assets/career/career9.jpg"}
+              %img{:alt => "", :src => "assets/career/career_thumb9.png"}
+            %a.fancybox{:href => "assets/career/career10.jpg"}
+              %img{:alt => "", :src => "assets/career/career_thumb10.png"}
+            %a.fancybox{:href => "assets/career/career11.jpg"}
+              %img{:alt => "", :src => "assets/career/career_thumb11.png"}
+            %a.fancybox{:href => "assets/inaugration/inaug1.jpg"}
+              %img{:alt => "", :src => "assets/inaugration/inaug_thumb1.png"}
+            %a.fancybox{:href => "assets/inaugration/inaug2.jpg"}
+              %img{:alt => "", :src => "assets/inaugration/inaug_thumb2.png"}
+            %a.fancybox{:href => "assets/inaugration/inaug3.jpg"}
+              %img{:alt => "", :src => "assets/inaugration/inaug_thumb3.png"}
+            %a.fancybox{:href => "assets/inaugration/inaug4.jpg"}
+              %img{:alt => "", :src => "assets/inaugration/inaug_thumb4.png"}
+            %a.fancybox{:href => "assets/inaugration/inaug5.jpg"}
+              %img{:alt => "", :src => "assets/inaugration/inaug_thumb5.png"}
+            %a.fancybox{:href => "assets/inaugration/inaug6.jpg"}
+              %img{:alt => "", :src => "assets/inaugration/inaug_thumb6.png"}
+            %a.fancybox{:href => "assets/inaugration/inaug7.jpg"}
+              %img{:alt => "", :src => "assets/inaugration/inaug_thumb7.png"}
+            %a.fancybox{:href => "assets/inaugration/inaug8.jpg"}
+              %img{:alt => "", :src => "assets/inaugration/inaug_thumb8.png"}
+            %a.fancybox{:href => "assets/competitive/comp1.jpg"}
+              %img{:alt => "", :src => "assets/competitive/comp_thumb1.png"}
+            %a.fancybox{:href => "assets/competitive/comp2.jpg"}
+              %img{:alt => "", :src => "assets/competitive/comp_thumb2.png"}
+            %a.fancybox{:href => "assets/competitive/comp3.jpg"}
+              %img{:alt => "", :src => "assets/competitive/comp_thumb3.png"}
+            %a.fancybox{:href => "assets/competitive/comp4.jpg"}
+              %img{:alt => "", :src => "assets/competitive/comp_thumb4.png"}
+            %a.fancybox{:href => "assets/competitive/comp5.jpg"}
+              %img{:alt => "", :src => "assets/competitive/comp_thumb5.png"}
+            %a.fancybox{:href => "assets/NYP/NYP1.jpg"}
+              %img{:alt => "", :src => "assets/NYP/NYP1_thumb.png"}
+            %a.fancybox{:href => "assets/NYP/NYP2.jpg"}
+              %img{:alt => "", :src => "assets/NYP/NYP2_thumb.png"}
+            %a.fancybox{:href => "assets/NYP/NYP3.jpg"}
+              %img{:alt => "", :src => "assets/NYP/NYP3_thumb.png"}
+            %a.fancybox{:href => "assets/NYP/NYP4.jpg"}
+              %img{:alt => "", :src => "assets/NYP/NYP4_thumb.png"}
+            %a.fancybox{:href => "assets/NYP/NYP5.jpg"}
+              %img{:alt => "", :src => "assets/NYP/NYP5_thumb.png"}
+            %a.fancybox{:href => "assets/NYP/NYP6.jpg"}
+              %img{:alt => "", :src => "assets/NYP/NYP6_thumb.png"}
+            %a.fancybox{:href => "assets/NYP/NYP7.jpg"}
+              %img{:alt => "", :src => "assets/NYP/NYP7_thumb.png"}
+            %a.fancybox{:href => "assets/NYP/NYP8.jpg"}
+              %img{:alt => "", :src => "assets/NYP/NYP8_thumb.png"}
+            %a.fancybox{:href => "assets/NYP/NYP9.jpg"}
+              %img{:alt => "", :src => "assets/NYP/NYP9_thumb.png"}
+            %a.fancybox{:href => "assets/NYP/NYP10.jpg"}
+              %img{:alt => "", :src => "assets/NYP/NYP10_thumb.png"}
+            %a.fancybox{:href => "assets/NYP/NYP11.jpg"}
+              %img{:alt => "", :src => "assets/NYP/NYP11_thumb.png"}
+            %a.fancybox{:href => "assets/lionsclub/Lionsclub1.jpg"}
+              %img{:alt => "", :src => "assets//lionsclub/Lionsclub_thumb1.png"}
+            %a.fancybox{:href => "assets/lionsclub/Lionsclub2.jpg"}
+              %img{:alt => "", :src => "assets/lionsclub/Lionsclub_thumb2.png"}
+            %a.fancybox{:href => "assets/lionsclub/Lionsclub3.jpg"}
+              %img{:alt => "", :src => "assets/lionsclub/Lionsclub_thumb3.png"}
+            %a.fancybox{:href => "assets/other/other1.jpg"}
+              %img{:alt => "", :src => "assets/other/other_thumb1.png"}
+            %a.fancybox{:href => "assets/other/other2.jpg"}
+              %img{:alt => "", :src => "assets/other/other_thumb2.png"}
+            %a.fancybox{:href => "assets/other/other3.jpg"}
+              %img{:alt => "", :src => "assets/other/other_thumb3.png"}
+            %a.fancybox{:href => "assets/other/other4.jpg"}
+              %img{:alt => "", :src => "assets/other/other_thumb4.png"}
+            %a.fancybox{:href => "assets/other/other5.jpg"}
+              %img{:alt => "", :src => "assets/other/other_thumb5.png"}
+            %a.fancybox{:href => "assets/other/other6.jpg"}
+              %img{:alt => "", :src => "assets/other/other_thumb6.png"}
+            %a.fancybox{:href => "assets/other/other7.jpg"}
+              %img{:alt => "", :src => "assets/other/other_thumb7.png"}
+            %a.fancybox{:href => "assets/other/other8.jpg"}
+              %img{:alt => "", :src => "assets/other/other_thumb8.png"}
+            %a.fancybox{:href => "assets/other/other9.jpg"}
+              %img{:alt => "", :src => "assets/other/other_thumb9.png"}
+            %a.fancybox{:href => "assets/other/other10.jpg"}
+              %img{:alt => "", :src => "assets/other/other_thumb10.png"}
+            %a.fancybox{:href => "assets/other/other11.jpg"}
+              %img{:alt => "", :src => "assets/other/other_thumb11.png"}
+            %a.fancybox{:href => "assets/other/other12.jpg"}
+              %img{:alt => "", :src => "assets/other/other_thumb12.png"}
+            %a.fancybox{:href => "assets/other/other13.jpg"}
+              %img{:alt => "", :src => "assets/other/other_thumb13.png"}
+            %a.fancybox{:href => "assets/other/other14.jpg"}
+              %img{:alt => "", :src => "assets/other/other_thumb14.png"}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
